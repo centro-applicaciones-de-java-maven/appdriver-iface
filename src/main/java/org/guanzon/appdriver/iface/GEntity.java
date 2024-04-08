@@ -11,6 +11,9 @@ public interface GEntity {
     public Object getValue(String fsColumn);
     public JSONObject setValue(int fnColumn, Object foValue);
     public JSONObject setValue(String fsColumn, Object foValue);
+    public JSONObject newRecord();
+    public JSONObject openRecord(String fsValue);
+    public JSONObject saveRecord();
     
     public void list();
 }
