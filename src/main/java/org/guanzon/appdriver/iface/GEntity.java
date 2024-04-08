@@ -2,18 +2,99 @@ package org.guanzon.appdriver.iface;
 
 import org.json.simple.JSONObject;
 
+/**
+ * Standard template for Guanzon Entities.
+ *  
+ * @author Marlon Sayson
+ * @author Michael Cuison
+ * @since April 8, 2024
+ */
 public interface GEntity {
-    public String getColumn(int fnValue);
-    public int getColumn(String fsValue);
-    public int getColumnCount();
-    public String getTable();
-    public Object getValue(int fnColumn);
-    public Object getValue(String fsColumn);
-    public JSONObject setValue(int fnColumn, Object foValue);
-    public JSONObject setValue(String fsColumn, Object foValue);
-    public JSONObject newRecord();
-    public JSONObject openRecord(String fsValue);
-    public JSONObject saveRecord();
+    /**
+     * Gets the column index name.
+     * @param fnValue - column index number
+     * @return column index name
+     */
+    String getColumn(int fnValue);
     
-    public void list();
+    /**
+     * Gets the column index number.
+     * @param fsValue - column index name
+     * @return column index number
+     */
+    int getColumn(String fsValue);
+    
+    /**
+     * Gets the total number of column.
+     * @return total number of column
+     */
+    int getColumnCount();
+    
+    /**
+     * Gets the table name.
+     * @return table name
+     */
+    String getTable();
+    
+    /**
+     * Gets the value of a column index number.
+     * 
+     * @param fnColumn - column index number
+     * @return object value
+     */
+    Object getValue(int fnColumn);
+    
+    /**
+     * Gets the value of a column index name.
+     * 
+     * @param fsColumn - column index name
+     * @return object value
+     */
+    Object getValue(String fsColumn);
+    
+    /**
+     * Sets column value.
+     * 
+     * @param fnColumn - column index number
+     * @param foValue - value
+     * @return result as success/failed
+     */
+    JSONObject setValue(int fnColumn, Object foValue);
+    
+    /**
+     * Sets column value.
+     * 
+     * @param fsColumn - column index name
+     * @param foValue - value
+     * @return result as success/failed
+     */
+    JSONObject setValue(String fsColumn, Object foValue);
+    
+    /**
+     * Set the edit mode of the entity to new.
+     * 
+     * @return result as success/failed
+     */
+    JSONObject newRecord();
+    
+    /**
+     * Opens a record.
+     * 
+     * @param fsValue - primary key of the entity
+     * @return result as success/failed
+     */
+    JSONObject openRecord(String fsValue);
+    
+    /**
+     * Save the entity.
+     * 
+     * @return result as success/failed
+     */
+    JSONObject saveRecord();
+    
+    /**
+     * Prints all the public methods used<br>
+     * and prints the column names of this entity.
+     */
+    void list();
 }
