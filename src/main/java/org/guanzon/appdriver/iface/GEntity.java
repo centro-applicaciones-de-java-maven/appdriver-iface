@@ -80,10 +80,10 @@ public interface GEntity {
     /**
      * Opens a record.
      * 
-     * @param fsValue - primary key of the entity
+     * @param fsCondition - filter values
      * @return result as success/failed
      */
-    JSONObject openRecord(String fsValue);
+    JSONObject openRecord(String fsCondition);
     
     /**
      * Save the entity.
