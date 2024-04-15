@@ -31,6 +31,12 @@ public interface GEntity {
     int getColumnCount();
     
     /**
+     * Gets the edit mode of the record.
+     * @return edit mode
+     */
+    int getEditMode();
+    
+    /**
      * Gets the table name.
      * @return table name
      */

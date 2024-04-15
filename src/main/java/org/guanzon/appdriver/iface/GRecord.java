@@ -18,6 +18,13 @@ public interface GRecord {
     int getEditMode();
     
     /**
+     * Sets the status of the record to search.
+     * 
+     * @param fsValue - org.guanzon.appdriver.constant.RecordStat 
+     */
+    void setRecordStatus(String fsValue);
+    
+    /**
      * Sets record value.
      * 
      * @param fnCol - column index number
@@ -111,4 +118,11 @@ public interface GRecord {
      * @return result as success/error
      */
     JSONObject searchRecord(String fsValue, boolean fbByCode);
+    
+    /**
+     * Gets the model entity object
+     * 
+     * @return Object
+     */
+    Object getModel();
 }
