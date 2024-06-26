@@ -4,7 +4,7 @@ import org.json.simple.JSONObject;
 
 public interface GTranDet extends GTransaction{
     int getItemCount();
-    Object getDetailModel();
+    Object getDetailModel(int fnRow);
     JSONObject setDetail(int fnRow, int fnCol, Object foData);
     JSONObject setDetail(int fnRow, String fsCol, Object foData);
     JSONObject searchDetail(int fnRow, String fsIndex, String fsValue, boolean fbIsExact);
