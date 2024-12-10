@@ -92,6 +92,13 @@ public interface GEntity {
     JSONObject openRecord(String fsCondition);
     
     /**
+     * Set the edit mode of the entity to new.
+     * 
+     * @return result as success/failed
+     */
+    JSONObject updateRecord();
+    
+    /**
      * Save the entity.
      * 
      * @return result as success/failed

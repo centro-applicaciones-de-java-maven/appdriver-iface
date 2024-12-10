@@ -25,40 +25,6 @@ public interface GRecord {
     void setRecordStatus(String fsValue);
     
     /**
-     * Sets record value.
-     * 
-     * @param fnCol - column index number
-     * @param foData - value
-     * @return result as success/error
-     */
-    JSONObject setMaster(int fnCol, Object foData);
-    
-    /**
-     * Sets record value.
-     * 
-     * @param fsCol - column index name
-     * @param foData - value
-     * @return result as success/failed
-     */
-    JSONObject setMaster(String fsCol, Object foData);
-    
-    /**
-     * Gets the value of a column.
-     * 
-     * @param fnCol - column index number
-     * @return object value
-     */
-    Object getMaster(int fnCol);
-    
-    /**
-     * Gets the value of a column.
-     * 
-     * @param fsCol - column index name
-     * @return object value
-     */
-    Object getMaster(String fsCol);
-
-    /**
      * Creates new record.
      * 
      * @return result as success/error
@@ -90,26 +56,23 @@ public interface GRecord {
     /**
      * Deletes a record.
      * 
-     * @param fsValue - record primary key value
      * @return result as success/error
      */
-    JSONObject deleteRecord(String fsValue);
+    JSONObject deleteRecord();
     
     /**
      * Set record status to inactive.
      * 
-     * @param fsValue - record primary key value
      * @return result as success/error
      */
-    JSONObject deactivateRecord(String fsValue);
+    JSONObject deactivateRecord();
     
     /**
      * Set record status to active.
      * 
-     * @param fsValue - record primary key value
      * @return result as success/error
      */
-    JSONObject activateRecord(String fsValue);
+    JSONObject activateRecord();
     
     /**
      * Searches a record.
