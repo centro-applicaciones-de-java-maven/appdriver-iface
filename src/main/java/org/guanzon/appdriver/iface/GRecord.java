@@ -75,6 +75,13 @@ public interface GRecord {
     JSONObject activateRecord();
     
     /**
+     * Validates record before saving
+     * 
+     * @return result as success/error
+     */
+    JSONObject isEntryOkay();
+    
+    /**
      * Searches a record.
      * @param fsValue - search value
      * @param fbByCode - true if will use primary key to search
@@ -88,4 +95,11 @@ public interface GRecord {
      * @return Object
      */
     Object getModel();
+    
+    /**
+     * Gets the SQL query for browsing record
+     * 
+     * @return String
+     */
+    String getSQ_Browse();
 }
