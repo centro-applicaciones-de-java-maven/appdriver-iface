@@ -4,16 +4,16 @@ import org.json.simple.JSONObject;
 
 public interface GRecord {
     int getEditMode();
-    void setRecordStatus(String fsValue);
+    void setRecordStatus(String recordStatus);
     JSONObject newRecord();
-    JSONObject openRecord(String fsValue);
+    JSONObject openRecord(String Id);
     JSONObject updateRecord();
     JSONObject saveRecord();
     JSONObject deleteRecord();
     JSONObject deactivateRecord();
     JSONObject activateRecord();
     JSONObject isEntryOkay();
-    JSONObject searchRecord(String fsValue, boolean fbByCode);
+    JSONObject searchRecord(String value, boolean byCode);
     Object getModel();
     String getSQ_Browse();
 }
