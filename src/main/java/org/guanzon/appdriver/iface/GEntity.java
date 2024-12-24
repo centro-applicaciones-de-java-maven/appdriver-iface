@@ -15,6 +15,9 @@ public interface GEntity {
     JSONObject newRecord();
     JSONObject openRecord(String Id);
     JSONObject openRecord(String Id1, Object Id2);
+    JSONObject openRecord(String Id1, Object Id2, Object Id3);
+    JSONObject openRecord(String Id1, Object Id2, Object Id3, Object Id4);
+    JSONObject openRecord(String Id1, Object Id2, Object Id3, Object Id4, Object Id5);
     JSONObject updateRecord();
     JSONObject saveRecord();
     void list();
