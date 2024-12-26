@@ -4,25 +4,29 @@ import org.json.simple.JSONObject;
 
 public interface GTransaction {
     JSONObject newTransaction();
-    JSONObject openTransaction(String fsValue);
+    JSONObject openTransaction(String transactionNo);
     JSONObject updateTransaction();
     JSONObject saveTransaction();
     
-    JSONObject deleteTransaction(String fsValue);
-    JSONObject closeTransaction(String fsValue);
-    JSONObject postTransaction(String fsValue);
-    JSONObject voidTransaction(String fsValue);
-    JSONObject cancelTransaction(String fsValue);
+    JSONObject deleteTransaction();
+    JSONObject deleteTransaction(String transactionNo);
+    
+    JSONObject closeTransaction();
+    JSONObject closeTransaction(String transactionNo);
+    
+    JSONObject postTransaction();
+    JSONObject postTransaction(String transactionNo);
+    
+    JSONObject voidTransaction();
+    JSONObject voidTransaction(String transactionNo);
+    
+    JSONObject cancelTransaction();
+    JSONObject cancelTransaction(String transactionNo);
 
-    JSONObject searchWithCondition(String fsCondition);
-    JSONObject searchTransaction(String fsIndex, String fsValue, boolean fbIsExact);
-    JSONObject searchMaster(String fsIndex, String fsValue, boolean fbIsExact);
-    JSONObject searchMaster(int fnIndex, String fsValue, boolean fbIsExact);
+    JSONObject searchTransaction(String value, boolean byCode);
     
-    Object getMasterModel();
-    JSONObject setMaster(int fnCol, Object foData);
-    JSONObject setMaster(String fsCol, Object foData);
-    
+    Object getMaster();
+        
     int getEditMode();
     void setTransactionStatus(String fsValue);
 }
